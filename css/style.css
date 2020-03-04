@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif ;
+}
+
+body {
+    background: honeydew;
+    margin: 10px 50px;
+    /* max-width: 1200px; */
+}
+
+h1, h3, h5 {
+    font-family: 'Roboto', Times, serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+    "head"
+    "main"
+    "footer";
+}
+
+/* Sivun yläosa */
+
+.head {
+    background-image: url(/materials/Fall.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    max-height: 400px;
+    min-height: 100px;;
+    grid-area: head;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+header {
+    grid-column: 3/8;
+    grid-row: 6/7;
+    justify-self: start;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #7A7A7A;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+nav {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-evenly;
+    border-right: 5px solid gold;
+    /* border-image-source: linear-gradient(0deg, transparent,gold, transparent);
+    border-image-slice: 1; */
+    background-image: linear-gradient(260deg,rgba(128, 128, 128, 0.3), transparent);
+    
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0dfdc;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.active {
+    color: #e0dfdc75;
+    border-right: 5px solid oldlace;
+}
+
+.active:hover {
+    color: #e0dfdc75;
+}
+
+nav a:hover {
+    color: teal;
+}
+
+/* Sivun keskiosa */
+
+main {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: 
+    "about aside";
+    background: antiquewhite;
+}
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-auto-flow: row;
+    border-top: 5px solid gold;
+    border-left: 5px solid gold;
+}
+
+.blog {
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.blog:last-child{
+    border-bottom: 0px;
+}
+
+.blog h5,h3,p {
+    margin: 0;
+}
+
+.blog h5 {
+    font-weight: normal;
+}
+
+.blog a {
+    color: black;
+    
+}
+
+aside {
+    grid-area: aside;
+    border: 5px inset brown;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    background-color: grey;
+    background-image: url(/materials/Scrolling-paused.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 361.5px;
+}
+
+aside:hover {
+    background-image: url(/materials/Scrolling.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+aside h3{
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    
+}
+
+aside ul {
+    padding-left: 0;
+}
+
+aside li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+aside li a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f6ae2d;
+    
+}
+
+/* Sivun alaosa */
+
+footer {
+    padding: 10px;
+    justify-self: center;
+}
+
+/* Responsive media */
+
+@media screen and (min-width: 1050px) {
+    .about {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    }
+
+    .blog {
+        border: 0;
+    }
+
+    header {
+        font-size: 30px;
+        color: #FFFFFF;
+        text-shadow: 4px 3px 0 #7A7A7A;
+        color: #FFFFFF;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        grid-template-areas: 
+        "about about"
+        "aside aside";
+        border-radius: 0px 0px 0px 60px;
+    }
+
+    .about {
+        border-right: 5px solid gold;
+    }
+
+    footer {
+        justify-self: end;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .blog {
+        max-height: 100px;
+        overflow: hidden;
+    }
+}
