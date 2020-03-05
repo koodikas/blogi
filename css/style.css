@@ -26,7 +26,7 @@ h1, h3, h5 {
 /* Sivun yläosa */
 
 .head {
-    background-image: url(materials/Fall.gif);
+    background-image: url(/materials/Fall.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -54,14 +54,10 @@ nav {
     grid-row: 6/7;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-evenly;
     border-right: 5px solid gold;
-    /* border-image-source: linear-gradient(0deg, transparent,gold, transparent);
-    border-image-slice: 1; */
-    background-image: linear-gradient(260deg,rgba(128, 128, 128, 0.3), transparent);
-    
-
+    background-image: linear-gradient(260deg,rgba(128, 128, 128, 0.3), transparent 80%);
 }
 
 nav a {
@@ -130,7 +126,7 @@ aside {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
-    background-image: url(materials/Scrolling-paused.gif);
+    background-image: url(/materials/Scrolling-paused.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,7 +134,7 @@ aside {
 }
 
 aside:hover {
-    background-image: url(materials/Scrolling.gif);
+    background-image: url(/materials/Scrolling.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
