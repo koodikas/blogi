@@ -26,7 +26,7 @@ h1, h3, h5 {
 /* Sivun yläosa */
 
 .head {
-    background-image: url(/materials/Fall.gif);
+    background-image: url(https://simoseb.github.io/blogi/materials/Fall.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -126,7 +126,7 @@ aside {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
-    background-image: url(/materials/Scrolling-paused.gif);
+    background-image: url(https://simoseb.github.io/blogi/materials/Scrolling-paused.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +134,7 @@ aside {
 }
 
 aside:hover {
-    background-image: url(/materials/Scrolling.gif);
+    background-image: url(https://simoseb.github.io/blogi/materials/Scrolling.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -160,6 +160,7 @@ aside li a {
     font-size: 2rem;
     font-weight: bold;
     color: #f6ae2d;
+    text-decoration: none;
     
 }
 
@@ -191,7 +192,19 @@ footer {
     }
 }
 
+@media screen and (max-width: 1050px) {
+    body {
+        background: honeydew;
+        margin: 3px 10px;
+    }
+}
+
 @media screen and (max-width: 650px) {
+    body {
+        background: honeydew;
+        margin: 0;
+    }
+
     main {
         grid-template-areas: 
         "about about"
@@ -209,8 +222,47 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
+    body {
+        background: honeydew;
+        margin: 0;
+    }
+
     .blog {
-        max-height: 100px;
-        overflow: hidden;
+        max-height: auto;
+    }
+
+    header {
+        grid-column: 2/10;
+        grid-row: 3/6;
+        justify-self: center;
+        font-size: 25px;
+        color: #FFFFFF;
+        text-shadow: 4px 3px 0 #7A7A7A;
+        color: #FFFFFF;
+        padding-left: 0;
+    }
+    
+    nav {
+        grid-column: 1/-1;
+        grid-row: -3/-1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        border-right: 0;
+        background-image: linear-gradient(to top,rgba(128, 128, 128, 1.0), transparent 80%);
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #e0dfdc;
+        padding-right: 0;
+        font-size: 20px;
+    }
+
+    .active {
+        color: #e0dfdc75;
+        border-bottom: 5px solid oldlace;
+        border-right: 0;
     }
 }
