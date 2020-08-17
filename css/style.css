@@ -40,7 +40,7 @@ h1, h3, h5 {
 /* Sivun yläosa */
 
 .head {
-    background-image: url(https://simoseb.github.io/blogi/materials/Fall.gif);
+    background-image: url(https://koodikas.github.io/blogi/materials/Fall.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -140,7 +140,7 @@ aside {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
-    background-image: url(https://simoseb.github.io/blogi/materials/Scrolling-paused.gif);
+    background-image: url(https://koodikas.github.io/blogi/materials/Scrolling-paused.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -148,7 +148,7 @@ aside {
 }
 
 aside:hover {
-    background-image: url(https://simoseb.github.io/blogi/materials/Scrolling.gif);
+    background-image: url(https://koodikas.github.io/blogi/materials/Scrolling.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
