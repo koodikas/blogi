@@ -1,11 +1,25 @@
+:root {
+    --ochre: #d17a22;
+    --midnight-green: #095256;
+    --feldgrau: #47685a;
+    --ash-grey: #b0b9c1;
+    --umber: #594f3b;
+    --bistre: #2d281e;
+    --bone-white: #e0dfdc;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif ;
 }
 
 body {
-    background: honeydew;
-    margin: 10px 50px;
+    background: var(--midnight-green);
+    background-image: url(/materials/cloud.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    margin: 15px 50px;
     /* max-width: 1200px; */
 }
 
@@ -43,9 +57,9 @@ header {
     grid-row: 6/7;
     justify-self: start;
     font-size: 30px;
-    color: #FFFFFF;
-    text-shadow: 4px 3px 0 #7A7A7A;
-    color: #FFFFFF;
+    color: var(--bone-white);
+    text-shadow: 4px 3px #7A7A7A;
+    color: var(--bone-white);
     padding-left: 10px;
 }
 
@@ -56,20 +70,20 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-evenly;
-    border-right: 5px solid gold;
+    border-right: 5px solid var(--ochre);
     background-image: linear-gradient(260deg,rgba(128, 128, 128, 0.3), transparent 80%);
 }
 
 nav a {
     text-decoration: none;
-    color: #e0dfdc;
+    color: var(--bone-white);
     padding-right: 10px;
     font-size: 20px;
 }
 
 .active {
     color: #e0dfdc75;
-    border-right: 5px solid oldlace;
+    border-right: 5px solid var(--bone-white);
 }
 
 .active:hover {
@@ -87,20 +101,20 @@ main {
     grid-template-columns: 7fr 3fr;
     grid-template-areas: 
     "about aside";
-    background: antiquewhite;
+    background-color: var(--ash-grey);
 }
 
 .about {
     grid-area: about;
     display: grid;
     grid-auto-flow: row;
-    border-top: 5px solid gold;
-    border-left: 5px solid gold;
+    border-top: 5px solid var(--ochre);
+    border-left: 5px solid var(--ochre);
 }
 
 .blog {
     padding: 10px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--bistre);
 }
 
 .blog:last-child{
@@ -108,6 +122,7 @@ main {
 }
 
 .blog h5,h3,p {
+    color: var(--bistre);
     margin: 0;
 }
 
@@ -116,13 +131,12 @@ main {
 }
 
 .blog a {
-    color: black;
-    
+    color: var(--bistre);
 }
 
 aside {
     grid-area: aside;
-    border: 5px inset brown;
+    border: 5px outset var(--ochre);
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
@@ -141,8 +155,8 @@ aside:hover {
 }
 
 aside h3{
-    background-color: tomato;
-    color: white;
+    background-color: var(--umber);
+    color: var(--bone-white);
     padding: 10px;
     
 }
@@ -168,7 +182,13 @@ aside li a {
 
 footer {
     padding: 10px;
-    justify-self: center;
+    justify-self: stretch;
+    border-radius: 0px 0px 10px 10px;
+    border-right: 5px solid var(--ochre);
+    border-left: 5px solid var(--ochre);
+    border-bottom: 5px solid var(--ochre);
+    text-align: center;
+    background-color: var(--feldgrau);
 }
 
 /* Responsive media */
@@ -185,23 +205,18 @@ footer {
 
     header {
         font-size: 30px;
-        color: #FFFFFF;
-        text-shadow: 4px 3px 0 #7A7A7A;
-        color: #FFFFFF;
         padding-left: 10px;
     }
 }
 
 @media screen and (max-width: 1050px) {
     body {
-        background: honeydew;
-        margin: 3px 10px;
+        margin: 15px 20px;
     }
 }
 
 @media screen and (max-width: 650px) {
     body {
-        background: honeydew;
         margin: 0;
     }
 
@@ -213,17 +228,21 @@ footer {
     }
 
     .about {
-        border-right: 5px solid gold;
+        border-right: 5px solid var(--ochre);
+    }
+
+    aside {
+        border: 5px solid var(--ochre);
     }
 
     footer {
-        justify-self: end;
+        border-radius: 0px 0px 0px 0px;
+        border: 0px;
     }
 }
 
 @media screen and (max-width: 550px) {
     body {
-        background: honeydew;
         margin: 0;
     }
 
@@ -236,9 +255,6 @@ footer {
         grid-row: 3/6;
         justify-self: center;
         font-size: 25px;
-        color: #FFFFFF;
-        text-shadow: 4px 3px 0 #7A7A7A;
-        color: #FFFFFF;
         padding-left: 0;
     }
     
@@ -254,15 +270,13 @@ footer {
     }
     
     nav a {
-        text-decoration: none;
-        color: #e0dfdc;
         padding-right: 0;
         font-size: 20px;
     }
 
     .active {
         color: #e0dfdc75;
-        border-bottom: 5px solid oldlace;
+        border-bottom: 5px solid var(--bone-white);
         border-right: 0;
     }
 }
