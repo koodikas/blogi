@@ -1,7 +1,7 @@
 :root {
     --ochre: #22bbd1;
     --midnight-green: #095256;
-    --feldgrau: #b0efd4;
+    --feldgrau: #97e7c582;
     --ash-grey: #c8f8ffc7;
     --umber: #8c3b3b9e;
     --bistre: #2d281e;
@@ -109,8 +109,6 @@ main {
     grid-area: about;
     display: grid;
     grid-auto-flow: row;
-    border-top: 5px solid var(--ochre);
-    border-left: 5px solid var(--ochre);
 }
 
 .blog {
@@ -137,8 +135,6 @@ main {
 
 aside {
     grid-area: aside;
-    border: 5px outset var(--ochre);
-    border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
     background-image: url(https://koodikas.github.io/blogi/materials/Fall.gif);
@@ -176,11 +172,6 @@ aside li a {
 footer {
     padding: 10px;
     justify-self: stretch;
-    border-radius: 0px 0px 10px 10px;
-    border-right: 5px solid var(--ochre);
-    border-top: 5px solid var(--ochre);
-    border-left: 5px solid var(--ochre);
-    border-bottom: 5px solid var(--ochre);
     text-align: center;
     background-color: var(--feldgrau);
 }
@@ -221,13 +212,6 @@ footer {
         border-radius: 0px 0px 0px 60px;
     }
 
-    .about {
-        border-right: 5px solid var(--ochre);
-    }
-
-    aside {
-        border: 5px solid var(--ochre);
-    }
 
     footer {
         border-radius: 0px 0px 0px 0px;
