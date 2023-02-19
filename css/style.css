@@ -1,9 +1,9 @@
 :root {
-    --ochre: #d17a22;
+    --ochre: #22bbd1;
     --midnight-green: #095256;
-    --feldgrau: #47685a;
-    --ash-grey: #b0b9c1;
-    --umber: #594f3b;
+    --feldgrau: #b0efd4;
+    --ash-grey: #c8f8ffc7;
+    --umber: #8c3b3b9e;
     --bistre: #2d281e;
     --bone-white: #e0dfdc;
 }
@@ -21,6 +21,7 @@ body {
     background-blend-mode: overlay;
     margin: 15px 50px;
     /* max-width: 1200px; */
+    background-image: url("https://images.unsplash.com/photo-1676553138763-6f83fac7094d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2487&q=80");
 }
 
 h1, h3, h5 {
@@ -40,7 +41,7 @@ h1, h3, h5 {
 /* Sivun yläosa */
 
 .head {
-    background-image: url(https://koodikas.github.io/blogi/materials/Fall.gif);
+    background-image: url(https://images.unsplash.com/photo-1676723933564-77379143d9fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2487&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -140,16 +141,8 @@ aside {
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
     background-color: grey;
-    background-image: url(https://koodikas.github.io/blogi/materials/Scrolling-paused.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-height: 361.5px;
-}
-
-aside:hover {
-    background-image: url(https://koodikas.github.io/blogi/materials/Scrolling.gif);
-    background-position: center;
+    background-image: url(https://koodikas.github.io/blogi/materials/Fall.gif);
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -173,7 +166,7 @@ aside li {
 aside li a {
     font-size: 2rem;
     font-weight: bold;
-    color: #f6ae2d;
+    color: #d2f62d;
     text-decoration: none;
     
 }
@@ -185,6 +178,7 @@ footer {
     justify-self: stretch;
     border-radius: 0px 0px 10px 10px;
     border-right: 5px solid var(--ochre);
+    border-top: 5px solid var(--ochre);
     border-left: 5px solid var(--ochre);
     border-bottom: 5px solid var(--ochre);
     text-align: center;
